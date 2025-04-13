@@ -1,13 +1,44 @@
 A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+in `lib/`.
+
+Same Solution for [github-user-activvity](https://roadmap.sh/projects/github-user-activity) chanllenge from [roadmap.sh](roadmap.sh)
+
+## clone this project:
+
+```bash
+git clone https://github.com/ali-raza-fa22/github-user-activity.git
+cd github-user-activity
+dart pub get
+```
+
+## Pre-requisities:
+
+```yaml
+dependencies:
+  http: ^0.13.0
+```
+
+and then run `dart pub get`.
+
+This will also add dependency.
 
 # Usage
 
-```dart
+```bash
+dart run bin/main.dart <username>
+```
+
+## Example:
+
+```bash
 dart run bin/main.dart ali-raza-fa22
 ```
 
-## GET example
+---
+
+# Notes:
+
+## GET api example
 
 ```dart
 final url = Uri.parse("https://jsonplaceholder.typicode.com/posts");
