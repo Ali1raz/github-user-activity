@@ -38,7 +38,7 @@ dart run bin/main.dart ali-raza-fa22
 
 # Notes:
 
-## GET api example
+## GET API example
 
 ```dart
 final url = Uri.parse("https://jsonplaceholder.typicode.com/posts");
@@ -47,7 +47,7 @@ final url = Uri.parse("https://jsonplaceholder.typicode.com/posts");
     final resp = await http.get(url);
     if (resp.statusCode == 200) {
       List<dynamic> data = jsonDecode(resp.body);
-      for (var item in data.take(5)) {
+      for (var item in data.take(5)) { // hardcoded 5
         print("Title: ${item['title']}");
       }
     } else {
@@ -65,7 +65,7 @@ void main(List<String> args) async {
   if (args.isEmpty || args.length > 1) {
     print("Please provide a single argument.");
     print("Please provide posts count.");
-    print("Usage: dart run bin/main.dart ali-raza-fa22");
+    print("Usage: dart run bin/main.dart 4");
     return;
   }
 
@@ -79,8 +79,9 @@ void main(List<String> args) async {
   }
 
   // ...
+  // FETCH POSTS
 
-  for (var item in data.take(postsCount)) {
+  for (var item in data.take(postsCount)) { // PRINT POSTS
         print("Title: ${item['title']}");
       }
 }
